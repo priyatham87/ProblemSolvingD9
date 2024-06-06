@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-9</title>
+</head>
+<body>
+    <script>
+        
+//Assignment problems
+//Q-1 )Write a program to print the dual numbers, which forms input2 by adding them. print such pairs separated by spaces.
+// input: [2,4,6,5,1]
+// input2: 6
+// output:
+// 2 4
+// 5 1 
+input1=[2,4,6,5,1]
+input2=6;
+for(i=0;i<input1.length;i++)
+{
+    for(j=i+1;j<input1.length;j++)
+    {
+        if(input1[i]+input1[j]==input2)
+        {
+          console.log(input1[i],input1[j])
+        }
+    }
+}
+console.log(`By Adding the above pairs we get input2 ${input2}`);
+
+//Q-2 Write a program to print no of pairs formed by the array of numbers
+//input : [10, 10, 20, 30, 20, 20]
+//output: 2 pairs
+a= [10, 10, 20, 30, 20, 20,20]
+e=[]
+ pc=0;
+for(n of a)
+{
+    if(!e.includes(n))
+    {
+        e.push(n)
+    }
+}
+for(s of e)
+{
+    c=0;
+    for(b of a)
+    {
+        if(s==b)
+        {
+            c++;
+        }
+    }
+    if(c>1)
+    {
+        if(c%2==0)
+        {
+            pc=pc+c/2
+        }
+        else
+        {
+            pc=pc+Math.floor(c/2)
+        }
+    }
+}
+console.log(a)
+console.log("Number of pairs of elements in an given array are:"+pc)
+    </script>
+    
+</body>
+</html>
